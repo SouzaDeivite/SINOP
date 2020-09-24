@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToDoApp</name>
+    </assembly>
+    <members>
+        <member name="M:ToDoApp.Controllers.EmprestimoController.RecuperarEmprestimo(System.Decimal)">
+            <summary>
+            Método para recuperar o empréstimo pelo código.
+            </summary>
+            <param name="codigoEmprestimo">informar o código de empréstimo [decimal]</param>
+            <returns>Objeto Empréstimo</returns>
+            <response code="200">Objeto do tipo de empréstimo especifico.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.EmprestimoController.RecuperarEmprestimos">
+            <summary>
+            Método para recuperar uma lista de empréstimos.
+            </summary>
+            <returns>Lista empréstimos</returns>
+            <response code="200">Lista do tipo de empréstimos.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.EmprestimoController.RecuperarEmprestimosPorDevolucao(System.Int32)">
+            <summary>
+            Método para retornar os empréstimos por devolução
+            </summary>
+            <param name="temDevolucao">Informa sem tem devolução ou não tem. [int]</param>
+            <returns>Lista de Empréstimos</returns>
+            <response code="200">Lista de empréstimos por devoluções.</response>   
+        </member>
+        <member name="M:ToDoApp.Controllers.EmprestimoController.ValidaUsuarioEmpresteMaximo(System.Decimal)">
+            <summary>
+            Método para validar se o usuário já fez mais de dois emprestimo
+            </summary>
+            <param name="codigoUsuraio">Informa o código do usuário. [decimal]</param>
+            <returns>A quantidade emprestada</returns>
+            <response code="200">A quantidade emprestada pelo usuário.</response>      
+        </member>
+        <member name="M:ToDoApp.Controllers.EmprestimoController.ValidaUsuarioEmprestimoExtrapolado">
+            <summary>
+            Método para validra se o usuário extrapolou a quantidade de dias permitido
+            </summary>
+            <returns>Lista empréstimos</returns>
+            <response code="200">Lista do tipo de empréstimos.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.EmprestimoController.IncluirEmprestimo(ToDoApp.Model.EmprestimoModel)">
+            <summary>
+            Método para incluir um empréstimo.
+            </summary>
+            <param name="emprestimoModel">Informa o objeto do tipo usuário. [EmprestimoModel]</param>
+            <returns>Objeto Resposta</returns>
+            <response code="200">O código incluído na base de dados.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.EmprestimoController.AlterarEmprestimo(ToDoApp.Model.EmprestimoModel)">
+            <summary>
+            Método para alterar o empréstimo.
+            </summary>
+            <param name="emprestimoModel">Informa o objeto do tipo empréstimo. [EmprestimoModel]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.EmprestimoController.DevolvidoEmprestimo(System.Decimal)">
+            <summary>
+            Método para devolver o livro emprestado.
+            </summary>
+            <param name="codigoEmprestimo">Informa o código do empréstimo. [decimal]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.InstituicaoEnsinoController.RecuperarInstituicaoEnsino(System.Decimal)">
+            <summary>
+            Método para recuperar a instituição de ensino pelo código.
+            </summary>
+            <param name="codigoInstituicaoEnsino">informar o código da instituição de ensino [decimal]</param>
+            <returns>Objeto Instituição de ensino</returns>
+            <response code="200">Objeto do tipo de Instituição de Ensino especifico.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.InstituicaoEnsinoController.RecuperarInstituicoesEnsino">
+            <summary>
+            Método para recuperar uma lista de instituição de ensino.
+            </summary>
+            <returns>Objeto Instituição de ensino</returns>
+            <response code="200">Lista do tipo de Instituição de Ensino especifico.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.InstituicaoEnsinoController.RecuperarInstituicoesEnsinoAtivos">
+            <summary>
+            Método para recuperar uma lista de instituição de ensino ativas.
+            </summary>
+            <returns>Objeto Instituição de ensino</returns>
+            <response code="200">Lista do tipo de Instituição de Ensino especifico.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.InstituicaoEnsinoController.IncluirInstituicaoEnsino(ToDoApp.Model.InstituicaoEnsinoModel)">
+            <summary>
+            Método para incluir uma instituição de ensino.
+            </summary>
+            <param name="instituicaoEnsinoModel">Informa o objeto do tipo instituição de ensino. [InstituicaoEnsinoModel]</param>
+            <returns>Objeto Resposta</returns>
+            <response code="200">O código incluído na base de dados.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.InstituicaoEnsinoController.AlterarInstituicaoEnsino(ToDoApp.Model.InstituicaoEnsinoModel)">
+            <summary>
+            Método para alterar a instituição de ensino.
+            </summary>
+            <param name="instituicaoEnsinoModel">Informa o objeto do tipo instituição de ensino. [InstituicaoEnsinoModel]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.InstituicaoEnsinoController.InativacaoLivro(System.Decimal)">
+            <summary>
+            Método para inativar/desativar a instituição de ensino.
+            </summary>
+            <param name="codigoInstituicaoEnsino">Informa o código da instituição de ensino. [decimal]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.LivroController.RecuperarLivro(System.Decimal)">
+            <summary>
+            Método para recuperar o livro pelo código.
+            </summary>
+            <param name="codigoLivro">informar o código do livro [decimal]</param>
+            <returns>Objeto Livro</returns>
+            <response code="200">Objeto do tipo de livro especifico.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.LivroController.RecuperarLivros">
+            <summary>
+            Método para recuperar uma lista de livros.
+            </summary>
+            <returns>Lista livros</returns>
+            <response code="200">Lista do tipo de livros.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.LivroController.RecuperarLivrosDisponiveisEmprestimo">
+            <summary>
+            Método para recuperar uma lista de livros disponíveis para emrepstimos.
+            </summary>
+            <returns>Lista livros</returns>
+            <response code="200">Lista do tipo de livros.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.LivroController.IncluirLivro(ToDoApp.Model.LivroModel)">
+            <summary>
+            Método para incluir um livro.
+            </summary>
+            <param name="livroModel">Informa o objeto do tipo livro. [LivroModel]</param>
+            <returns>Objeto Resposta</returns>
+            <response code="200">O código incluído na base de dados.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.LivroController.AlterarLivro(ToDoApp.Model.LivroModel)">
+            <summary>
+            Método para alterar o livro.
+            </summary>
+            <param name="livroModel">Informa o objeto do tipo livro. [LivroModel]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.LivroController.InativacaoLivro(System.Decimal)">
+            <summary>
+            Método para inativar/desativar o livro.
+            </summary>
+            <param name="codigoLivro">Informa o código do livro. [decimal]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.ReservaController.RecuperarReserva(System.Decimal)">
+            <summary>
+            Método para recuperar a reserva pelo código.
+            </summary>
+            <param name="codigoReserva">informar o código da reserva [decimal]</param>
+            <returns>Objeto Reserva</returns>
+            <response code="200">Objeto do tipo de reserva especifico.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.ReservaController.RecuperarReservas">
+            <summary>
+            Método para recuperar uma lista de reservas.
+            </summary>
+            <returns>Lista reservas</returns>
+            <response code="200">Lista do tipo de reservas.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.ReservaController.IncluirReserva(ToDoApp.Model.ReservaModel)">
+            <summary>
+            Método para incluir uma reserva.
+            </summary>
+            <param name="reservaModel">Informa o objeto do tipo reserva. [ReservaModel]</param>
+            <returns>Objeto Resposta</returns>
+            <response code="200">O código incluído na base de dados.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.ReservaController.AlterarReserva(ToDoApp.Model.ReservaModel)">
+            <summary>
+            Método para alterar a reserva.
+            </summary>
+            <param name="reservaModel">Informa o objeto do tipo reserva. [ReservaModel]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.ReservaController.InativacaoReserva(ToDoApp.Model.ReservaModel)">
+            <summary>
+            Método para inativar/desativar a reserva.
+            </summary>
+            <param name="reservaModel">Informa o código da reserva. [decimal]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.ReservaController.IncluirLivroReserva(System.Decimal)">
+            <summary>
+            Método para incluir um livro na reserva.
+            </summary>
+            <param name="codigoEmprestimo">Informa o código do emprestimo. [decimal]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>/// 
+        </member>
+        <member name="M:ToDoApp.Controllers.UsuarioController.RecuperarUsuario(System.Decimal)">
+            <summary>
+            Método para recuperar o usuário pelo código.
+            </summary>
+            <param name="codigoUsuario">informar o código do usuário [decimal]</param>
+            <returns>Objeto Usuário</returns>
+            <response code="200">Objeto do tipo de usuário especifico.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.UsuarioController.RecuperarUsuarios">
+            <summary>
+            Método para recuperar uma lista de usuários.
+            </summary>
+            <returns>Lista usuários</returns>
+            <response code="200">Lista do tipo de usuários.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.UsuarioController.RecuperarUsuariosDisponiveisEmprestimo">
+            <summary>
+            Método para recuperar uma lista de usuários disponíveis para emrepstimos.
+            </summary>
+            <returns>Lista usuários</returns>
+            <response code="200">Lista do tipo de usuários.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.UsuarioController.IncluirUsuario(ToDoApp.Model.UsuarioModel)">
+            <summary>
+            Método para incluir um usuários.
+            </summary>
+            <param name="usuarioModel">Informa o objeto do tipo usuário. [UsuarioModel]</param>
+            <returns>Objeto Resposta</returns>
+            <response code="200">O código incluído na base de dados.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.UsuarioController.AlterarUsuario(ToDoApp.Model.UsuarioModel)">
+            <summary>
+            Método para alterar o usuários.
+            </summary>
+            <param name="usuarioModel">Informa o objeto do tipo usuário. [UsuarioModel]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>
+        </member>
+        <member name="M:ToDoApp.Controllers.UsuarioController.InativacaoUsuario(System.Decimal)">
+            <summary>
+            Método para inativar/desativar o usuários.
+            </summary>
+            <param name="codigoUsuario">Informa o código do usuário. [decimal]</param>
+            <returns></returns>
+            <response code="200">Não existem retorno para este método.</response>
+        </member>
+    </members>
+</doc>
